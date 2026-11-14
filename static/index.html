@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Решись Авиа — прогноз спроса</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1>✈️ Решись Авиа</h1>
+  <nav>
+    <a href="/static/login.html" id="loginLink">Войти</a>
+    <a href="/static/register.html">Регистрация</a>
+    <span id="userLabel"></span>
+    <button id="logoutBtn" hidden>Выйти</button>
+  </nav>
+</header>
+<main>
+  <section class="card">
+    <h2>Прогноз спроса на рейс</h2>
+    <form id="forecastForm">
+      <label>Откуда <input id="origin" value="MOW" required></label>
+      <label>Куда <input id="destination" value="AER" required></label>
+      <label>Дата <input id="date" type="date" value="2026-06-01" required></label>
+      <label>Цена, ₽ <input id="price" type="number" value="9000" required></label>
+      <button type="submit">Рассчитать</button>
+    </form>
+    <div id="result" hidden>
+      <p><b>Маршрут:</b> <span id="rRoute"></span></p>
+      <p><b>Дата:</b> <span id="rDate"></span></p>
+      <p><b>Мест в самолёте:</b> <span id="rSeats"></span></p>
+      <p><b>Желают купить (медиана):</b> <span id="rWish"></span></p>
+      <p><b>Прогноз продаж:</b> <span id="rBought"></span></p>
+    </div>
+  </section>
+  <section class="card" id="chartCard" hidden>
+    <h2>Распределение спроса</h2>
+    <img id="chartImg" style="max-width:100%">
+  </section>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>

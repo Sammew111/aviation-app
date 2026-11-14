@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8">
+<title>Регистрация</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><main class="card">
+<h2>Регистрация</h2>
+<form id="regForm">
+  <input id="username" placeholder="Логин (мин. 3)" required>
+  <input id="password" type="password" placeholder="Пароль (мин. 4)" required>
+  <button>Создать аккаунт</button>
+</form>
+<p><a href="/static/login.html">Уже есть аккаунт? Войти</a></p>
+<script>
+document.getElementById("regForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const res = await fetch("/api/register", { method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body: JSON.stringify({username: document.getElementById("username").value,
+                          password: document.getElementById("password").value}) });
+  const d = await res.json();
+  if (!res.ok) return alert(d.detail || "Ошибка");
+  alert("Аккаунт создан, войдите.");
+  location.href = "/static/login.html";
+});
+</script>
+</main></body></html>
