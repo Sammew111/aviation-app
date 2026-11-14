@@ -26,7 +26,3 @@
 - `requirements.txt` — зависимости Python.
 - `static/` — фронтенд (HTML, CSS, JS).
 - `data/` — исходные данные (CSV).
-
-##  Ссылки
-- **GitHub**: [https://github.com/Samnew111/aviation-app](https://github.com/Samnew111/aviation-app)
-- **Работающее приложение (хостинг)**: *co163629.tw1.ru (http://localhost:8000/)*
