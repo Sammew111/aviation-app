@@ -29,4 +29,4 @@
 
 ##  Ссылки
 - **GitHub**: [https://github.com/Samnew111/aviation-app](https://github.com/Samnew111/aviation-app)
-- **Работающее приложение (хостинг)**: *co163629.tw1.ru*
+- **Работающее приложение (хостинг)**: *co163629.tw1.ru (http://localhost:8000/)*
